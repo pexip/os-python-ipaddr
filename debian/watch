@@ -1,0 +1,7 @@
+version=3
+
+opts=\
+downloadurlmangle=s|.*[?]name=(.*?)&.*|http://ipaddr-py.googlecode.com/files/$1|,\
+filenamemangle=s|[^/]+[?]name=(.*?)&.*|$1| \
+http://code.google.com/p/ipaddr-py/downloads/detail[?]name=ipaddr-([0-9.]+).tar.gz&.*
+

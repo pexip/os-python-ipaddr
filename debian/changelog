@@ -1,0 +1,124 @@
+python-ipaddr (2.1.10-1) unstable; urgency=low
+
+   * New upstream release
+   * Update clean rule to work with new release 
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 10 Feb 2012 09:17:56 -0500
+
+python-ipaddr (2.1.9-2) unstable; urgency=low
+
+  * Rebuild for Python transition
+  * Protect for loops in debian/rules with set -e
+  * Drop Breaks: ${python:Breaks} since it is no longer used
+  * Bump Standards-Version to 3.9.2 without further change
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 20 Apr 2011 00:40:45 -0400
+
+python-ipaddr (2.1.9-1) unstable; urgency=low
+
+  * New upstream release
+  * Install RELEASENOTES as changelog instead
+    - Replace docs with python-ipaddr.docs and python3-ipaddr.docs
+  * Override dh_auto_clean to clean completely with python3
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 23 Feb 2011 08:49:44 -0500
+
+python-ipaddr (2.1.8-1) unstable; urgency=low
+
+  * New upstream release
+  * Provide python3-ipaddr from this source using 2to3
+    - Add package to debian/control
+    - Add X-Python3-Version to debian/control
+    - Add python3-all to build-depends
+    - Add installation into the correct binaries in debian/rules and run 2to3
+      between python and python3 rules
+  * Run tests (ipaddr_test.py) during build for each python/python3 version
+  * Drop XB-Python-Version and switch XS-Python-Version to X-Python-Version
+  * Add Breaks: ${python:Breaks} to python-ipaddr
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 13 Feb 2011 16:17:14 -0500
+
+python-ipaddr (2.1.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 25 Jan 2011 07:08:30 -0500
+
+python-ipaddr (2.1.5-2) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 18 Oct 2010 15:35:02 -0400
+
+python-ipaddr (2.1.5-1) experimental; urgency=low
+
+  * New upstream release (upload to experimental due to freeze)
+    - Containment test should always return false on mixed-type tests (2.1.5)
+    - More invalid IPv6 addresses will be rejected (2.1.4)
+  * Drop releasenotes.patch and related packaging changes since this release
+    manages to include the release notes in the package
+  * Bump standards version to 3.9.1 without further change
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 11 Oct 2010 14:47:01 -0400
+
+python-ipaddr (2.1.3-2) unstable; urgency=low
+
+  * Add new RELEASENOTES file in releasenots.patch. (upstream re-released 2.1.3
+    with this added in a revised tarball using the same version number)
+    - Add debian/docs to install it
+    - Add build-dep on quilt (>= 0.46-7)
+    - Change debian/rules to build --with quilt
+    - Add README.source
+  * Convert from python-support to dh_python2
+    - Drop build-depends on python-support
+    - Bump python-all version requirement to 2.6.5-2 and move to build-depends
+      from build-depends-indep
+    - Bump debhelper version requirement
+    - Change debian/rules to build --with python2
+  * Add XB-Python-Version
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 23 Jun 2010 23:08:30 -0400
+
+python-ipaddr (2.1.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 12 Jun 2010 21:08:27 -0400
+
+python-ipaddr (2.1.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Update debian/watch for new googlecode download urls
+  * Drop DM-Upload-Allowed from debian/control
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 06 Jun 2010 00:07:26 -0400
+
+python-ipaddr (2.1.1-1) unstable; urgency=low
+
+  * New upstream bugfix release
+    - Drop debian/patches/IPv4IpValidationError (incorporated upstream)
+  * Drop patch system (not used)
+    - Remove quilt build-dep
+    - Adjust debian/rules
+    - Remove debian/patches
+    - Remove debian/README.source
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 02 Mar 2010 22:18:21 -0500
+
+python-ipaddr (2.1.0-1) unstable; urgency=low
+
+  * New upstream release
+    - Drop debian/patches/Invalid_exception_names and
+      NameError_checking_prefixlen_IPv6Network (incorporated upstream)
+    - Update debian/patches/IPv4IpValidationError for new exception names
+  * Bump standards version to 3.8.4 without further change
+  * Improve long description (Closes: #568904)
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 19 Feb 2010 13:32:39 -0500
+
+python-ipaddr (2.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #566724)
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 24 Jan 2010 15:44:45 -0500
+

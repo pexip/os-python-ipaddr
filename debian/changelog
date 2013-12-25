@@ -1,3 +1,9 @@
+python-ipaddr (2.1.10-1pexip1) pexip; urgency=low
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Wed, 25 Dec 2013 03:02:50 +0000
+
 python-ipaddr (2.1.10-1) unstable; urgency=low
 
    * New upstream release

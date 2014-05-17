@@ -3,13 +3,12 @@ Section: python
 Priority: optional
 Maintainer: Scott Kitterman <scott@kitterman.com>
 Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 7.3.16), python-all (>= 2.6.5-2~), python3-all (>= 3.1.3-3)
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 7.3.16), python-all (>= 2.6.5-2~), dh-python
+Standards-Version: 3.9.5
 Homepage: http://code.google.com/p/ipaddr-py/
 X-Python-Version: >= 2.4
-X-Python3-Version: >= 3.1
-Vcs-Svn: svn://svn.debian.org/python-modules/packages/python-ipaddr/trunk/
-Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/python-ipaddr/trunk/
+Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/python-ipaddr/trunk/
+Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/python-ipaddr/trunk/
 
 Package: python-ipaddr
 Architecture: all
@@ -19,18 +18,6 @@ Description: Python module for working with IP addresses, both IPv4 and IPv6
  and networks in Python.  It is intended to be fast and lightweight.
  .
  This is a pure Python implementation of classes for IPv4/6 addresses and
- networks. It supports comparisons to determine if IP addresses are contained
- inside a defined network, conversion of lists of IP addresses into compact
- CIDR lists, and other IP address manipulation
-
-Package: python3-ipaddr
-Architecture: all
-Depends: ${python3:Depends}, ${misc:Depends}
-Description: Python3 module for working with IP addresses, both IPv4 and IPv6
- This library is used to create/poke/manipulate IPv4 and IPv6 addresses
- and networks in Python3.  It is intended to be fast and lightweight.
- .
- This is a pure Python3 implementation of classes for IPv4/6 addresses and
  networks. It supports comparisons to determine if IP addresses are contained
  inside a defined network, conversion of lists of IP addresses into compact
  CIDR lists, and other IP address manipulation.

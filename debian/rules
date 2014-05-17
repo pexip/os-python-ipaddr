@@ -2,23 +2,10 @@
 # -*- makefile -*-
 
 %:
-	dh $@ --with python2,python3
+	dh $@ --with python2
 
-override_dh_auto_install:
-	set -e && for pyvers in $(shell pyversions -vr); do \
-		python$$pyvers setup.py install --no-compile -O0 --install-layout=deb \
-			--root $(CURDIR)/debian/python-ipaddr; \
-		python$$pyvers $(CURDIR)/ipaddr_test.py; \
-	done
-	2to3 -w $(CURDIR)/ipaddr.py
-	2to3 -w $(CURDIR)/ipaddr_test.py
-	set -e && for pyvers in $(shell py3versions -sv); do \
-		python$$pyvers setup.py install --no-compile -O0 --install-layout=deb \
-			--root $(CURDIR)/debian/python3-ipaddr; \
-		python$$pyvers $(CURDIR)/ipaddr_test.py; \
-	done
-	mv $(CURDIR)/ipaddr.py.bak $(CURDIR)/ipaddr.py
-	mv $(CURDIR)/ipaddr_test.py.bak $(CURDIR)/ipaddr_test.py
+override_dh_auto_test:
+	python $(CURDIR)/ipaddr_test.py
 
 override_dh_installdocs:
 	cp $(CURDIR)/RELEASENOTES $(CURDIR)/changelog
@@ -28,5 +15,4 @@ override_dh_installdocs:
 override_dh_auto_clean:
 	rm -rf $(CURDIR)/ipaddr.pyc
 	rm -rf $(CURDIR)/build
-	rm -rf $(CURDIR)/__pycache__
 	dh_clean

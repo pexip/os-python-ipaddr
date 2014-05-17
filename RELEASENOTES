@@ -4,6 +4,16 @@
 
 Here are the visible changes for each release.
 
+== 2.1.11 ==
+
+(2014-01-31)
+
+  * hostmask parsing bug fixed by pmarks (a nearly complete rewrite of the mask parsing code)
+  * i97, incorrectly parses some v6 addresses.
+  * docstring typos.
+  * i95, refer to the nets in the exception raised by collapse_address_list
+  * add license to boilerplate to test-2to3.sh
+
 == 2.1.10 ==
 
 (2012-01-20)

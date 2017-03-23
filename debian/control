@@ -11,7 +11,7 @@ X-Python-Version: >= 2.4
 X-Python3-Version: >= 3.1
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/python-ipaddr/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/python-ipaddr/trunk/
-XS-Pexip-Upstream: http://archive.ubuntu.com/ubuntu/ precise
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
 
 Package: python-ipaddr
 Architecture: all

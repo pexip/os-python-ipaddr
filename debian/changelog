@@ -1,3 +1,35 @@
+python-ipaddr (2.1.11-2pexip1) pexip; urgency=low
+
+  * Migrate to Jessie
+
+ -- John-Mark Bell <jmb@pexip.com>  Thu, 23 Mar 2017 22:42:01 +0000
+
+python-ipaddr (2.1.11-2) unstable; urgency=low
+
+  * Drop python3-ipaddr binary since ipaddr is incorporated in python3.3 and
+    later as ipaddress and nothing in the archive needs python3-ipaddr
+    - Remove binary from debian/control
+    - Drop python3 build-depends and X-Python3-Version from debian/control
+    - Simplify debian/rules to build for only python2.7
+    - Remove python3-ipaddr.docs
+  * Explicitly depend on dh-python to get the updated version
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 16 May 2014 21:44:51 -0400
+
+python-ipaddr (2.1.11-1) unstable; urgency=medium
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+  * Fix a typo in README.source.
+
+  [ Scott Kitterman ]
+  * New upstream release
+  * Update debian/watch to check pypi, since tarballs are no longer published
+    on Google code
+  * Bump standards version to 3.9.5 without further change
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 26 Apr 2014 11:29:54 -0400
+
 python-ipaddr (2.1.10-1pexip1) pexip; urgency=low
 
   * Prepare Pexip packaging

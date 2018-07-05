@@ -10,7 +10,7 @@ Homepage: http://code.google.com/p/ipaddr-py/
 X-Python-Version: >= 2.4
 Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/python-ipaddr/trunk/
 Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/python-ipaddr/trunk/
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: python-ipaddr
 Architecture: all

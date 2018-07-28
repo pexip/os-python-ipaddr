@@ -1,3 +1,9 @@
+python-ipaddr (2.1.11-2pexip2) pexip; urgency=low
+
+  * Migrate to Stretch
+
+ -- John-Mark Bell <jmb@pexip.com>  Sun, 29 Jul 2018 00:27:41 +0100
+
 python-ipaddr (2.1.11-2pexip1) pexip; urgency=low
 
   * Migrate to Jessie

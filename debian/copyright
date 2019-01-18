@@ -1,7 +1,7 @@
 This package was debianized by Scott Kitterman <scott@kitterman.com> on
 Sun, 24 Jan 2010 15:45:45 -0500.
 
-It was downloaded from <http://code.google.com/p/ipaddr-py/>
+It was downloaded from <https://github.com/google/ipaddr-py>
 
 Upstream Author:
 
@@ -29,4 +29,3 @@ See /usr/share/common-licenses/Apache-2.0 for the full text of the license
 
 The Debian packaging is © 2010, Scott Kitterman <scott@kitterman.com> and
 is licensed under the same terms as the upstream package, see above.
-

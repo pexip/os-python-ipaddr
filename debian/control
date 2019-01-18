@@ -3,12 +3,11 @@ Section: python
 Priority: optional
 Maintainer: Scott Kitterman <scott@kitterman.com>
 Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 7.3.16), python-all (>= 2.6.5-2~), dh-python
-Standards-Version: 3.9.5
-Homepage: http://code.google.com/p/ipaddr-py/
-X-Python-Version: >= 2.4
-Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/python-ipaddr/trunk/
-Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/python-ipaddr/trunk/
+Build-Depends: debhelper (>= 9~), python-all, dh-python
+Standards-Version: 4.3.0
+Homepage: https://github.com/google/ipaddr-py
+Vcs-Git: https://salsa.debian.org/python-team/modules/python-ipaddr.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/python-ipaddr
 
 Package: python-ipaddr
 Architecture: all
@@ -21,4 +20,7 @@ Description: Python module for working with IP addresses, both IPv4 and IPv6
  networks. It supports comparisons to determine if IP addresses are contained
  inside a defined network, conversion of lists of IP addresses into compact
  CIDR lists, and other IP address manipulation.
-
+ .
+ This module was incorporated into python3.3 and later as ipaddress. A direct
+ backport of ipaddress is available in Debian as python-ipaddress.  There are
+ incompatibilies between the two, so both are provided.

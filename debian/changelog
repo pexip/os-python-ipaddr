@@ -1,3 +1,9 @@
+python-ipaddr (2.2.0-2pexip1) pexip; urgency=medium
+
+  * Migrate to Buster
+
+ -- Vincent Sanders <vince@pexip.com>  Sun, 01 Mar 2020 15:36:05 +0000
+
 python-ipaddr (2.2.0-2) unstable; urgency=medium
 
   [ Scott Kitterman ]

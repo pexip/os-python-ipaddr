@@ -1,3 +1,41 @@
+python-ipaddr (2.2.0-2) unstable; urgency=medium
+
+  [ Scott Kitterman ]
+  * Run upstream tests as autopkgtest
+  * Bump standards-version to 4.3.0 without further change
+  * Add lintian override for python-foo-but-no-python3-foo since ipaddr is
+    part of the standard library in python3 (as ipaddress)
+  * Support nocheck in dh_auto_test override
+  * Use pybuild as the buildsystem
+
+  [ Ondřej Nový ]
+  * d/changelog: Remove trailing whitespaces
+  * d/control: Remove ancient X-Python-Version field
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 18 Jan 2019 12:57:31 -0500
+
+python-ipaddr (2.2.0-1) unstable; urgency=medium
+
+  [ Scott Kitterman ]
+  * New upstream release
+    - Remove obsolete dh_installdocs override
+    - Remove obsolete debian/python-ipaddr.docs
+  * Update debian/watch to use pypi.debian.net
+  * Update package long description to mention python-ipaddress
+  * Bump compat and minimum debhelper version to 9
+  * Drop minimum python version, satisfied in all releases
+  * Update Homepage: field in debian/control to new location
+  * Update upstream location in debian/copyright to new location
+  * Update standards-version to 4.1.3 without further change
+  * Switch to 3.0 (quilt) source package format
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/watch: Use https protocol
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 24 Feb 2018 20:12:46 -0500
+
 python-ipaddr (2.1.11-2pexip2) pexip; urgency=low
 
   * Migrate to Stretch
@@ -45,7 +83,7 @@ python-ipaddr (2.1.10-1pexip1) pexip; urgency=low
 python-ipaddr (2.1.10-1) unstable; urgency=low
 
    * New upstream release
-   * Update clean rule to work with new release 
+   * Update clean rule to work with new release
 
  -- Scott Kitterman <scott@kitterman.com>  Fri, 10 Feb 2012 09:17:56 -0500
 
@@ -165,4 +203,3 @@ python-ipaddr (2.0.0-1) unstable; urgency=low
   * Initial release (Closes: #566724)
 
  -- Scott Kitterman <scott@kitterman.com>  Sun, 24 Jan 2010 15:44:45 -0500
-

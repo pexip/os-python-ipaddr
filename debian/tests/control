@@ -1,0 +1,3 @@
+Tests: py2
+Depends: @, python
+Restrictions: allow-stderr

@@ -1,17 +1,23 @@
 Source: python-ipaddr
 Section: python
 Priority: optional
-Maintainer: Scott Kitterman <scott@kitterman.com>
-Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9~), python-all, dh-python
-Standards-Version: 4.3.0
+Maintainer: Stefano Rivera <stefanor@debian.org>
+Uploaders:
+ Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Build-Depends:
+ debhelper-compat (= 12),
+ dh-python,
+ python3-all,
+ python3-setuptools
+Standards-Version: 4.5.0
 Homepage: https://github.com/google/ipaddr-py
 Vcs-Git: https://salsa.debian.org/python-team/modules/python-ipaddr.git
 Vcs-Browser: https://salsa.debian.org/python-team/modules/python-ipaddr
+Rules-Requires-Root: no
 
-Package: python-ipaddr
+Package: python3-ipaddr
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${python3:Depends}
 Description: Python module for working with IP addresses, both IPv4 and IPv6
  This library is used to create/poke/manipulate IPv4 and IPv6 addresses
  and networks in Python.  It is intended to be fast and lightweight.
@@ -23,4 +29,5 @@ Description: Python module for working with IP addresses, both IPv4 and IPv6
  .
  This module was incorporated into python3.3 and later as ipaddress. A direct
  backport of ipaddress is available in Debian as python-ipaddress.  There are
- incompatibilies between the two, so both are provided.
+ incompatibilies between the two, so both are provided. This module primarily
+ exists to support pip in Python 2.7 virtualenvs.

@@ -1,0 +1,13 @@
+#! /bin/sh
+
+set -efu
+
+pys="$(py3versions -s)"
+
+cp ipaddr_test.py "$AUTOPKGTEST_TMP"
+cd "$AUTOPKGTEST_TMP"
+
+for py in $pys; do
+	echo "=== $py ==="
+	$py ipaddr_test.py
+done

@@ -2,14 +2,12 @@
 # -*- makefile -*-
 
 %:
-	dh $@ --with python2 --buildsystem=pybuild
+	dh $@ --with python3 --buildsystem=pybuild
 
 override_dh_auto_test:
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
-	python $(CURDIR)/ipaddr_test.py
-endif
+	dh_auto_test -- --system=custom --test-args "{interpreter} $(CURDIR)/ipaddr_test.py"
 
 override_dh_auto_clean:
-	rm -rf $(CURDIR)/ipaddr.pyc
+	rm -rf $(CURDIR)/__pycache__
 	rm -rf $(CURDIR)/build
 	dh_clean

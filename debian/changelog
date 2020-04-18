@@ -1,3 +1,31 @@
+python-ipaddr (2.2.0-4) unstable; urgency=medium
+
+  * Use python3-all in the autopkgtests.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 18 Apr 2020 14:43:18 -0700
+
+python-ipaddr (2.2.0-3) unstable; urgency=medium
+
+  [ Stefano Rivera ]
+  * Reintroduce to unstable, to keep virtualenv working for python2.7.
+  * Ship python3 modules, only. We need them as wheels for pip.
+  * Declare Rules-Requires-Root: no
+  * Bump Standards-Version to 4.5.0, no changes needed.
+  * Build with setuptools, for dirtbike.
+  * Run autopkgtests will all Python 3 versions.
+  * Convert copyright to machine-readable format.
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Debian Janitor ]
+  * Move source package lintian overrides to debian/source.
+  * Bump debhelper from old 9 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Name,
+    Repository, Repository-Browse.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 18 Apr 2020 09:41:40 -0700
+
 python-ipaddr (2.2.0-2) unstable; urgency=medium
 
   [ Scott Kitterman ]

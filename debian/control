@@ -9,7 +9,7 @@ Standards-Version: 4.3.0
 Homepage: https://github.com/google/ipaddr-py
 Vcs-Git: https://salsa.debian.org/python-team/modules/python-ipaddr.git
 Vcs-Browser: https://salsa.debian.org/python-team/modules/python-ipaddr
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: python-ipaddr
 Architecture: all
